@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Adding</title>
+    {% include 'students/cdnlines.html' %}
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3" col-md-6>
+            <form method="POST" action="{% url 'save_data' %}">
+                <h2 class="'text-center">Add Student Data..</h2>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter Student Name</label>
+                        <input type="text" name="sname" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter school Name</label>
+                        <input type="text" name="school" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter class_name</label>
+                        <input type="text" name="cls" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter section</label>
+                        <input type="text" name="section" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter mobile </label>
+                        <input type="number" name="mobile" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter telugu_marks </label>
+                        <input type="number" name="telugu" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter hindi_marks </label>
+                        <input type="number" name="hindi" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter english_marks</label>
+                        <input type="number" name="english" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter maths_marks</label>
+                        <input type="number" name="maths" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter science_marks</label>
+                        <input type="number" name="science" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter social_marks</label>
+                        <input type="number" name="social" class="form-control">
+                    </div>
+                </div>
+                <center>
+                    <input type="submit" value="submit">
+                    <input type="reset" value="clear">
+                </center>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
